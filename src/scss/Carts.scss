@@ -1,0 +1,43 @@
+@import "./mixins.scss";
+
+.carts {
+  @include customPosition(fixed, 60px, 15%, 1, 82%, auto, true);
+  overflow-y: auto;
+  bottom: 0;
+  padding: 20px;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0 20px 0;
+    .count__sort {
+      @include customFont(14px, "roboto");
+      color: $colorGray;
+    }
+    .sort {
+      label {
+        @include customFont(14px, "roboto");
+        color: $colorGray;
+        margin-right: 10px;
+      }
+    }
+  }
+  &__main {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__pagination {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    a {
+      color: black;
+      padding: 8px 16px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .active {
+      color: $colorOrange;
+    }
+  }
+}

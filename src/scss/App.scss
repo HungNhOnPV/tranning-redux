@@ -1,0 +1,17 @@
+@import "mixins";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+// font-face
+@include customFontFace(openSans, "../fonts/OpenSans-Regular.ttf");
+@include customFontFace(openSansBold, "../fonts/OpenSans-Bold.ttf");
+@include customFontFace(openSansLight, "../fonts/OpenSans-Light.ttf");
+@include customFontFace(openSansItalic, "../fonts/OpenSans-Italic.ttf");
+@include customFontFace(openSansSemiBold, "../fonts/OpenSans-SemiBold.ttf");
+@include customFontFace(roboto, "../fonts/Roboto-Regular.ttf");
+@include customFontFace(robotoLight, "../fonts/Roboto-Light.ttf");
+@include customFontFace(robotoMedium, "../fonts/Roboto-Medium.ttf");
+@include customFontFace(robotoSlabLight, "../fonts/RobotoSlab-Light.ttf");

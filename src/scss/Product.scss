@@ -1,0 +1,35 @@
+@import './mixins.scss';
+
+.product {
+  width: 23%;
+  margin-top: 20px;
+  margin-right: 1.8%;
+  border-radius: 10px;
+  border: 1px solid $colorE6;
+  overflow: hidden;
+  img {
+    width: 100%;
+  }
+  h2 {
+    @include customFont(18px, "roboto");
+    margin-left: 20px;
+  }
+  p {
+    @include customFont(14px, "roboto");
+    margin: 10px 20px;
+    color: $colorGray;
+  }
+  &__detail {
+    margin-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    &__star {
+      color: $colorOrange;
+    }
+    &__pay {
+      margin: 0 !important;
+      margin-right: 20px !important;
+    }
+  }
+}

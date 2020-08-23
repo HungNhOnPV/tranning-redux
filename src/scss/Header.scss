@@ -1,0 +1,43 @@
+@import "./mixins";
+
+.header {
+  display: flex;
+  padding: 10px;
+  background: #222f3f;
+  @include customPosition(fixed, 0, auto, 99, 100%, 50px, true);
+  .logo {
+    display: flex;
+    text-decoration: none;
+    img {
+      margin-right: 12px;
+      width: 50px;
+    }
+    span {
+      @include customFont(30px, "roboto");
+      margin-right: 16px;
+      color: $colorWhite;
+      line-height: 65px;
+    }
+  }
+  .input {
+    margin-top: 10px;
+    &__search {
+      display: inline-block;
+      &__box {
+        @include customFont(14px, "roboto");
+        width: 300px;
+        height: 30px;
+        border: 0;
+        padding: 2.5px 12px;
+        border-radius: 5px 0 0 5px;
+      }
+    }
+    .btn {
+      @include customPosition(relative, 2px, 0, 1, 0, 0, false);
+      cursor: pointer;
+      background-color: $colorOrange;
+      border-radius: 0 5px 5px 0;
+      padding: 7px 30px;
+    }
+  }
+}

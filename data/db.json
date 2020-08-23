@@ -1,0 +1,209 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "image": "http://dummyimage.com/231x165.png/cc0000/ffffff",
+      "name": "Kerri Heilds",
+      "producer": "Heilds",
+      "type": "Audio",
+      "price": 584,
+      "star": 4
+    }, {
+      "id": 2,
+      "image": "http://dummyimage.com/231x165.png/cc0000/ffffff",
+      "name": "Henderson Riby",
+      "producer": "Riby",
+      "type": "Camera",
+      "price": 877,
+      "star": 4
+    }, {
+      "id": 3,
+      "image": "http://dummyimage.com/231x165.png/cc0000/ffffff",
+      "name": "Yvon Whinney",
+      "producer": "Whinney",
+      "type": "Computer",
+      "price": 193,
+      "star": 2
+    }, {
+      "id": 4,
+      "image": "http://dummyimage.com/231x165.png/cc0000/ffffff",
+      "name": "Viva Ardern",
+      "producer": "Ardern",
+      "type": "TV",
+      "price": 236,
+      "star": 2
+    }, {
+      "id": 5,
+      "image": "http://dummyimage.com/231x165.png/cc0000/ffffff",
+      "name": "Cully Etter",
+      "producer": "Etter",
+      "type": "Video Games",
+      "price": 321,
+      "star": 5
+    }, {
+      "id": 6,
+      "image": "http://dummyimage.com/231x165.png/cc0000/ffffff",
+      "name": "Patrizio Atkin",
+      "producer": "Atkin",
+      "type": "TV",
+      "price": 187,
+      "star": 3
+    }, {
+      "id": 7,
+      "image": "http://dummyimage.com/231x165.png/cc0000/ffffff",
+      "name": "Portie Winspurr",
+      "producer": "Winspurr",
+      "type": "Video Games",
+      "price": 766,
+      "star": 5
+    }, {
+      "id": 8,
+      "image": "http://dummyimage.com/231x165.png/cc0000/ffffff",
+      "name": "Godfree Weekley",
+      "producer": "Weekley",
+      "type": "Audio",
+      "price": 560,
+      "star": 4
+    }, {
+      "id": 9,
+      "image": "http://dummyimage.com/231x165.png/cc0000/ffffff",
+      "name": "Andriana Kops",
+      "producer": "Kops",
+      "type":"Video Games",
+      "price": 563,
+      "star": 5
+    }, {
+      "id": 10,
+      "image": "http://dummyimage.com/231x165.png/cc0000/ffffff",
+      "name": "Phoebe Thomann",
+      "producer": "Thomann",
+      "type":"Camera",
+      "price": 356,
+      "star": 1
+    }, {
+      "id": 11,
+      "image": "http://dummyimage.com/231x165.png/cc0000/ffffff",
+      "name": "Butch McKeating",
+      "producer": "McKeating",
+      "type":"TV",
+      "price": 766,
+      "star": 2
+    }, {
+      "id": 12,
+      "image": "http://dummyimage.com/231x165.png/cc0000/ffffff",
+      "name": "Terence Matchett",
+      "producer": "Matchett",
+      "type":"Camera",
+      "price": 805,
+      "star": 1
+    }, {
+      "id": 13,
+      "image": "http://dummyimage.com/231x165.png/cc0000/ffffff",
+      "name": "Merrill Dowsey",
+      "producer": "Dowsey",
+      "type":"Video Games",
+      "price": 164,
+      "star": 1
+    }, {
+      "id": 14,
+      "image": "http://dummyimage.com/231x165.png/cc0000/ffffff",
+      "name": "Katerina Keats",
+      "producer": "Keats",
+      "type":"Camera",
+      "price": 638,
+      "star": 2
+    }, {
+      "id": 15,
+      "image": "http://dummyimage.com/231x165.png/cc0000/ffffff",
+      "name": "Corrina Caulket",
+      "producer": "Caulket",
+      "type":"Camera",
+      "price": 944,
+      "star": 5
+    }, {
+      "id": 16,
+      "image": "http://dummyimage.com/231x165.png/cc0000/ffffff",
+      "name": "Josey O'Fearguise",
+      "producer": "O'Fearguise",
+      "type":"Audio",
+      "price": 747,
+      "star": 4
+    }, {
+      "id": 17,
+      "image": "http://dummyimage.com/231x165.png/cc0000/ffffff",
+      "name": "Peyton MacLese",
+      "producer": "MacLese",
+      "type":"Video Games",
+      "price": 270,
+      "star": 3
+    }, {
+      "id": 18,
+      "image": "http://dummyimage.com/231x165.png/cc0000/ffffff",
+      "name": "Gustavus De Atta",
+      "producer": "De Atta",
+      "type":"Audio",
+      "price": 465,
+      "star": 3
+    }, {
+      "id": 19,
+      "image": "http://dummyimage.com/231x165.png/cc0000/ffffff",
+      "name": "Locke Timagegewell",
+      "producer": "Timagegewell",
+      "type":"Computer",
+      "price": 93,
+      "star": 2
+    }, {
+      "id": 20,
+      "image": "http://dummyimage.com/231x165.png/cc0000/ffffff",
+      "name": "Friederike Tickel",
+      "producer": "Tickel",
+      "type":"Computer",
+      "price": 169,
+      "star": 1
+    }
+  ],
+  "types": [
+    {
+      "id": 1,
+      "type":"Audio"
+    },
+    {
+      "id": 2,
+      "type":"Camera"
+    },
+    {
+      "id": 3,
+      "type":"Computer"
+    },
+    {
+      "id": 4,
+      "type":"TV"
+    },
+    {
+      "id": 5,
+      "type":"Video Games"
+    }
+  ],
+  "stars": [
+    {
+      "id": 1,
+      "star": 1
+    },
+    {
+      "id": 2,
+      "star": 2
+    },
+    {
+      "id": 3,
+      "star": 3
+    },
+    {
+      "id": 4,
+      "star": 4
+    },
+    {
+      "id": 5,
+      "star": 5
+    }
+  ]
+}

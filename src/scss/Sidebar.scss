@@ -1,0 +1,71 @@
+@import "./mixins.scss";
+
+.sidebar {
+  @include customPosition(fixed, 60px, 0, 1, 12%, auto, true);
+  overflow-y: auto;
+  bottom: 0;
+  padding: 20px;
+  border-right: 1px solid $colorLight;
+  &__clear {
+    @include customFont(14px, "roboto");
+    display: inline-block;
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    color: $colorBlack;
+    text-decoration: none;
+    span {
+      margin-left: 5px;
+    }
+    &:hover {
+      transform: none;
+      color: $colorRed;
+      background-color: $colorE6;
+      border-color: $colorE6;
+    }
+  }
+  &__title {
+    font-size: 18px;
+    color: $colorGray;
+    margin: 10px 0 15px;
+  }
+  &__category {
+    border-bottom: 1px solid $colorE6;
+    &__link {
+      display: block;
+      margin-bottom: 10px;
+      color: $colorBlack;
+      text-decoration: none;
+      cursor: pointer;
+      span {
+        @include customFont(14px, "roboto");
+        margin-left: 3px;
+      }
+      &:hover {
+        color: $colorRed;
+      }
+    }
+  }
+  &__Refine {
+    form{
+      p {
+        @include customFont(14px, "roboto");
+        font-weight: bold;
+      }
+      label {
+        display: block;
+        margin: 5px 0 5px;
+      }
+      .star {
+        margin-top: 10px;
+        cursor: pointer;
+        display: inline-block;
+        i {
+          color: $colorOrange;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
