@@ -3,12 +3,15 @@ import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import "./scss/App.scss";
 import Carts from "./components/Carts";
+import * as typeActions from "./actions";
+import { useSelector, useDispatch } from 'react-redux';
 
-const App = () => {
+const App = (props) => {
   const [products, setProducts] = useState([]);
   const [text, setText] = useState("");
   const [type, setType] = useState("");
   const [star, setStar] = useState(0);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     let xhr = new XMLHttpRequest();
@@ -29,6 +32,10 @@ const App = () => {
     xhr.send();
   }, []);
 
+  useEffect(() => {
+    dispatch(typeActions.fetchListTask(products))
+  }, [dispatch]);
+
   const passText = (value) => {
     setText(value);
   };
@@ -48,6 +55,7 @@ const App = () => {
       <Carts products={products} text={text} type={type} star={star} />
     </div>
   );
+
 };
 
 export default App;

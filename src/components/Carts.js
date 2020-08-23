@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Product from "./product";
 import "../scss/Carts.scss";
+import { bindActionCreators } from 'redux';
 
 const addCarts = (products, paginate) => {
   const count1 = (paginate - 1) * 16;
