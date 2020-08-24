@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Product from "./product";
+import * as typeActions from "../actions";
+import { useSelector, useDispatch } from 'react-redux';
 import "../scss/Carts.scss";
-import { bindActionCreators } from 'redux';
 
 const addCarts = (products, paginate) => {
   const count1 = (paginate - 1) * 16;
@@ -9,6 +10,7 @@ const addCarts = (products, paginate) => {
   let result = null;
   result = products.slice(count1, count2);
   window.localStorage.setItem("carts", JSON.stringify(result));
+  return result;
 };
 
 const showData = () => {
@@ -42,38 +44,44 @@ const showPaginate = (products, paginate, setPaginate) => {
   return result;
 };
 
-const Carts = (props) => {
-  const [products, setProducts] = useState(props.products);
+const Carts = () => {
+  const listProducts = useSelector(state => state.products.listProducts);
+  const text = useSelector(state => state.products.text);
+  const type = useSelector(state => state.products.type);
+  const star = useSelector(state => state.products.star);
+  // const carts = useSelector(state => state.products.carts);
+  const [products, setProducts] = useState(listProducts);
   const [paginate, setPaginate] = useState(1);
   const [select, setSelect] = useState("fea");
+  const dispatch = useDispatch();
 
   useEffect(() => {
     if (select === "asc") {
-      setProducts(() => [...props.products].sort((a, b) => a.price - b.price));
+      setProducts(() => [...listProducts].sort((a, b) => a.price - b.price));
     } else if (select === "desc") {
-      setProducts(() => [...props.products].sort((a, b) => b.price - a.price));
+      setProducts(() => [...listProducts].sort((a, b) => b.price - a.price));
     } else if (select === "fea") {
-      setProducts(props.products);
+      setProducts(listProducts);
     }
-    if (props.text !== "" || props.star !== 0 || props.type !== "") {
-      const result = [...props.products].filter((product) => {
-        if (props.text !== "") {
+    if (text !== "" || star !== 0 || type !== "") {
+      const result = [...listProducts].filter((product) => {
+        if (text !== "") {
           return (
-            product.name.toLowerCase().indexOf(props.text.toLowerCase()) !== -1
+            product.name.toLowerCase().indexOf(text.toLowerCase()) !== -1
           );
-        } else if (props.type !== "") {
+        } else if (type !== "") {
           return (
-            product.type.toLowerCase().indexOf(props.type.toLowerCase()) !== -1
+            product.type.toLowerCase().indexOf(type.toLowerCase()) !== -1
           );
-        } else if (props.star !== 0) {
-          return product.star === props.star;
+        } else if (star !== 0) {
+          return product.star === star;
         }
       });
       setProducts(() => [...result]);
     }
-  }, [select, props.text, props.type, props.star, props.products]);
+  }, [select, text, type, star, listProducts]);
 
-  addCarts(products, paginate);
+  dispatch(typeActions.showProducts(addCarts(products, paginate)));
 
   return (
     <div className="carts">

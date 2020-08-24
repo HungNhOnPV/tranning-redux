@@ -1,13 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import { useSelector, useDispatch } from 'react-redux';
+import * as typeActions from "../actions";
 import "../scss/Header.scss";
 import logo from "../images/logo-is.png";
 
-const Header = (props) => {
-  const [text, setText] = useState("");
-
-  const sendText = () => {
-    props.passText(text);
-  };
+const Header = () => {
+  const text = useSelector(state => state.products.text);
+  const dispatch = useDispatch();
 
   return (
     <header className="header">
@@ -23,10 +22,10 @@ const Header = (props) => {
             placeholder="Search a product"
             value={text}
             name={text}
-            onChange={(e) => setText(e.target.value)}
+            onChange={(e) => dispatch(typeActions.searchText(e.target.value))}
           />
         </div>
-        <span className="btn" onClick={sendText()}>
+        <span className="btn">
           <a className="btn__search">
             <i className="fa fa-search"></i>
           </a>

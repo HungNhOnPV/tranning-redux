@@ -1,16 +1,13 @@
 import React, { useState, useEffect } from "react";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
-import "./scss/App.scss";
 import Carts from "./components/Carts";
 import * as typeActions from "./actions";
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import "./scss/App.scss";
 
-const App = (props) => {
+const App = () => {
   const [products, setProducts] = useState([]);
-  const [text, setText] = useState("");
-  const [type, setType] = useState("");
-  const [star, setStar] = useState(0);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -32,27 +29,13 @@ const App = (props) => {
     xhr.send();
   }, []);
 
-  useEffect(() => {
-    dispatch(typeActions.fetchListTask(products))
-  }, [dispatch]);
-
-  const passText = (value) => {
-    setText(value);
-  };
-
-  const passType = (value) => {
-    setType(value);
-  }
-
-  const passStar = (value) => {
-    setStar(value);
-  }
+  dispatch(typeActions.fetchListTask(products));
 
   return (
     <div className="App">
-      <Header products={products} passText={passText}/>
-      <Sidebar products={products} passType={passType} passStar={passStar} />
-      <Carts products={products} text={text} type={type} star={star} />
+      <Header />
+      <Sidebar />
+      <Carts />
     </div>
   );
 

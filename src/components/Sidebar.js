@@ -1,16 +1,20 @@
 import React, { useState, useEffect } from "react";
+import { useSelector, useDispatch } from 'react-redux';
+import * as typeActions from "../actions";
 import "../scss/Sidebar.scss";
 
 const Sidebar = (props) => {
-  const [products, setProducts] = useState(props.products);
+  const listProducts = useSelector(state => state.products.listProducts);
+  const [products, setProducts] = useState(listProducts);
   const [types, setTypes] = useState([]);
-  const [type, setType] = useState("");
+  const type = useSelector(state => state.products.type);
   const [stars, setStars] = useState([]);
-  const [star, setStar] = useState(0);
+  const star = useSelector(state => state.products.star);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    setProducts(props.products);
-  }, [props.products]);
+    setProducts(listProducts);
+  }, [listProducts]);
 
   useEffect(() => {
     let xhr = new XMLHttpRequest();
@@ -50,14 +54,6 @@ const Sidebar = (props) => {
     xhr.send();
   }, []);
 
-  const sendType = () => {
-    props.passType(type);
-  };
-
-  const sendStar = () => {
-    props.passStar(star);
-  };
-
   const showType = (types) => {
     let result = [];
     types.forEach((type, i) => {
@@ -65,7 +61,7 @@ const Sidebar = (props) => {
         <a
           key={i}
           className="sidebar__category__link"
-          onClick={() => setType(type.type)}
+          onClick={() => dispatch(typeActions.searchType(type.type))}
         >
           <i className="fas fa-angle-right"></i>
           <span>{type.type}</span>
@@ -79,7 +75,7 @@ const Sidebar = (props) => {
     let result = [];
     stars.forEach((star, i) => {
       result.push(
-        <div key={i} className="star_rating" onClick={() => setStar(star.star)}>
+        <div key={i} className="star_rating" onClick={() => dispatch(typeActions.searchStar(star.star))}>
           {showStar(star.star)}
         </div>
       );
@@ -99,8 +95,8 @@ const Sidebar = (props) => {
   };
 
   const resetFilter = (value) => {
-    setType(value[0]);
-    setStar(value[1]);
+    dispatch(typeActions.searchType(value[0]));
+    dispatch(typeActions.searchStar(value[1]));
   };
 
   return (
@@ -116,7 +112,6 @@ const Sidebar = (props) => {
       <p className="sidebar__title">Show results for</p>
       <div className="sidebar__category">
         {showType(types)}
-        {sendType()}
       </div>
       <p className="sidebar__title">Refine by</p>
       <div className="sidebar__Refine">
@@ -124,7 +119,6 @@ const Sidebar = (props) => {
           <p>Star</p>
           <div className="star">
             {showStarRating(stars)}
-            {sendStar()}
           </div>
         </form>
       </div>
