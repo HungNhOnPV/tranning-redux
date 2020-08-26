@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useSelector, useDispatch } from 'react-redux';
 import * as typeActions from "../actions";
 import "../scss/Header.scss";

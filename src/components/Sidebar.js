@@ -1,58 +1,22 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from 'react-redux';
 import * as typeActions from "../actions";
 import "../scss/Sidebar.scss";
 
 const Sidebar = (props) => {
-  const listProducts = useSelector(state => state.products.listProducts);
-  const [products, setProducts] = useState(listProducts);
-  const [types, setTypes] = useState([]);
+  const types = useSelector(state => state.products.types);
   const type = useSelector(state => state.products.type);
-  const [stars, setStars] = useState([]);
+  const stars = useSelector(state => state.products.stars);
   const star = useSelector(state => state.products.star);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    setProducts(listProducts);
-  }, [listProducts]);
+    dispatch(typeActions.fetchListTypeRequest());
+  }, [dispatch]);
 
   useEffect(() => {
-    let xhr = new XMLHttpRequest();
-    xhr.open("GET", "http://localhost:3000/types");
-    // request state change event
-    xhr.onreadystatechange = function () {
-      // request completed?
-      if (xhr.readyState !== 4) return;
-      if (xhr.status === 200) {
-        // request successful - show response
-        setTypes(JSON.parse(xhr.responseText));
-      } else {
-        // request error
-        console.log("HTTP error", xhr.status, xhr.statusText);
-      }
-    };
-    // start request
-    xhr.send();
-  }, []);
-
-  useEffect(() => {
-    let xhr = new XMLHttpRequest();
-    xhr.open("GET", "http://localhost:3000/stars");
-    // request state change event
-    xhr.onreadystatechange = function () {
-      // request completed?
-      if (xhr.readyState !== 4) return;
-      if (xhr.status === 200) {
-        // request successful - show response
-        setStars(JSON.parse(xhr.responseText));
-      } else {
-        // request error
-        console.log("HTTP error", xhr.status, xhr.statusText);
-      }
-    };
-    // start request
-    xhr.send();
-  }, []);
+    dispatch(typeActions.fetchListStarRequest());
+  }, [dispatch]);
 
   const showType = (types) => {
     let result = [];

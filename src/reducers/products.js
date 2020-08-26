@@ -3,6 +3,8 @@ import * as types from "../constants";
 let initialState = {
   listProducts: [],
   carts: [],
+  types: [],
+  stars: [],
   text: "",
   type: "",
   star: 0,
@@ -13,6 +15,14 @@ let myReducers = (state = initialState, action) => {
     case types.FETCH_TASK: {
       const { data } = action.payload;
       return { ...state, listProducts: data };
+    }
+    case types.FETCH_TYPE: {
+      const { data } = action.payload;
+      return { ...state, types: data };
+    }
+    case types.FETCH_STAR: {
+      const { data } = action.payload;
+      return { ...state, stars: data };
     }
     case types.SEARCH_TEXT: {
       const { text } = action.payload;

@@ -88,7 +88,7 @@ const Carts = () => {
       <div className="carts__header">
         <p className="count__sort">{products.length} results found in 3ms</p>
         <div className="sort">
-          <label for="sort">Sort by</label>
+          <label htmlFor="sort">Sort by</label>
           <select
             id="sort"
             value={select}
