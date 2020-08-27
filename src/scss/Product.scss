@@ -8,7 +8,9 @@
   border: 1px solid $colorE6;
   overflow: hidden;
   img {
-    width: 100%;
+    display: flex;
+    margin: auto;
+    padding: 30px 0;
   }
   h2 {
     @include customFont(18px, "roboto");

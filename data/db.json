@@ -2,7 +2,7 @@
   "products": [
     {
       "id": 1,
-      "image": "http://dummyimage.com/231x165.png/cc0000/ffffff",
+      "image": "https://cdn-demo.algolia.com/bestbuy-0118/1313531168_sb.jpg",
       "name": "Kerri Heilds",
       "producer": "Heilds",
       "type": "Audio",
@@ -10,7 +10,7 @@
       "star": 4
     }, {
       "id": 2,
-      "image": "http://dummyimage.com/231x165.png/cc0000/ffffff",
+      "image": "https://cdn-demo.algolia.com/bestbuy-0118/6386677_sb.jpg",
       "name": "Henderson Riby",
       "producer": "Riby",
       "type": "Camera",
@@ -18,7 +18,7 @@
       "star": 4
     }, {
       "id": 3,
-      "image": "http://dummyimage.com/231x165.png/cc0000/ffffff",
+      "image": "https://cdn-demo.algolia.com/bestbuy-0118/3828012_sb.jpg",
       "name": "Yvon Whinney",
       "producer": "Whinney",
       "type": "Computer",
@@ -26,7 +26,7 @@
       "star": 2
     }, {
       "id": 4,
-      "image": "http://dummyimage.com/231x165.png/cc0000/ffffff",
+      "image": "https://cdn-demo.algolia.com/bestbuy-0118/4835800_sb.jpg",
       "name": "Viva Ardern",
       "producer": "Ardern",
       "type": "TV",
@@ -34,7 +34,7 @@
       "star": 2
     }, {
       "id": 5,
-      "image": "http://dummyimage.com/231x165.png/cc0000/ffffff",
+      "image": "https://cdn-demo.algolia.com/bestbuy-0118/5768586_sb.jpg",
       "name": "Cully Etter",
       "producer": "Etter",
       "type": "Video Games",
@@ -42,7 +42,7 @@
       "star": 5
     }, {
       "id": 6,
-      "image": "http://dummyimage.com/231x165.png/cc0000/ffffff",
+      "image": "https://cdn-demo.algolia.com/bestbuy-0118/7775211_sb.jpg",
       "name": "Patrizio Atkin",
       "producer": "Atkin",
       "type": "TV",
@@ -50,7 +50,7 @@
       "star": 3
     }, {
       "id": 7,
-      "image": "http://dummyimage.com/231x165.png/cc0000/ffffff",
+      "image": "https://cdn-demo.algolia.com/bestbuy-0118/8216064_sb.jpg",
       "name": "Portie Winspurr",
       "producer": "Winspurr",
       "type": "Video Games",
@@ -58,7 +58,7 @@
       "star": 5
     }, {
       "id": 8,
-      "image": "http://dummyimage.com/231x165.png/cc0000/ffffff",
+      "image": "https://cdn-demo.algolia.com/bestbuy-0118/8390036_sb.jpg",
       "name": "Godfree Weekley",
       "producer": "Weekley",
       "type": "Audio",
@@ -66,7 +66,7 @@
       "star": 4
     }, {
       "id": 9,
-      "image": "http://dummyimage.com/231x165.png/cc0000/ffffff",
+      "image": "https://cdn-demo.algolia.com/bestbuy-0118/5655982_sb.jpg",
       "name": "Andriana Kops",
       "producer": "Kops",
       "type":"Video Games",
@@ -74,7 +74,7 @@
       "star": 5
     }, {
       "id": 10,
-      "image": "http://dummyimage.com/231x165.png/cc0000/ffffff",
+      "image": "https://cdn-demo.algolia.com/bestbuy-0118/5655977_sb.jpg",
       "name": "Phoebe Thomann",
       "producer": "Thomann",
       "type":"Camera",
@@ -82,7 +82,7 @@
       "star": 1
     }, {
       "id": 11,
-      "image": "http://dummyimage.com/231x165.png/cc0000/ffffff",
+      "image": "https://cdn-demo.algolia.com/bestbuy-0118/1792151_sb.jpg",
       "name": "Butch McKeating",
       "producer": "McKeating",
       "type":"TV",
@@ -90,7 +90,7 @@
       "star": 2
     }, {
       "id": 12,
-      "image": "http://dummyimage.com/231x165.png/cc0000/ffffff",
+      "image": "https://cdn-demo.algolia.com/bestbuy-0118/1308183846_sb.jpg",
       "name": "Terence Matchett",
       "producer": "Matchett",
       "type":"Camera",
@@ -98,7 +98,7 @@
       "star": 1
     }, {
       "id": 13,
-      "image": "http://dummyimage.com/231x165.png/cc0000/ffffff",
+      "image": "https://cdn-demo.algolia.com/bestbuy-0118/9667333_sb.jpg",
       "name": "Merrill Dowsey",
       "producer": "Dowsey",
       "type":"Video Games",
@@ -106,7 +106,7 @@
       "star": 1
     }, {
       "id": 14,
-      "image": "http://dummyimage.com/231x165.png/cc0000/ffffff",
+      "image": "https://cdn-demo.algolia.com/bestbuy-0118/3458015_sb.jpg",
       "name": "Katerina Keats",
       "producer": "Keats",
       "type":"Camera",
@@ -114,7 +114,7 @@
       "star": 2
     }, {
       "id": 15,
-      "image": "http://dummyimage.com/231x165.png/cc0000/ffffff",
+      "image": "https://cdn-demo.algolia.com/bestbuy-0118/4981000_sb.jpg",
       "name": "Corrina Caulket",
       "producer": "Caulket",
       "type":"Camera",
@@ -122,7 +122,7 @@
       "star": 5
     }, {
       "id": 16,
-      "image": "http://dummyimage.com/231x165.png/cc0000/ffffff",
+      "image": "https://cdn-demo.algolia.com/bestbuy-0118/4335802_sb.jpg",
       "name": "Josey O'Fearguise",
       "producer": "O'Fearguise",
       "type":"Audio",
@@ -130,7 +130,7 @@
       "star": 4
     }, {
       "id": 17,
-      "image": "http://dummyimage.com/231x165.png/cc0000/ffffff",
+      "image": "https://cdn-demo.algolia.com/bestbuy-0118/6848136_sb.jpg",
       "name": "Peyton MacLese",
       "producer": "MacLese",
       "type":"Video Games",
@@ -138,7 +138,7 @@
       "star": 3
     }, {
       "id": 18,
-      "image": "http://dummyimage.com/231x165.png/cc0000/ffffff",
+      "image": "https://cdn-demo.algolia.com/bestbuy-0118/5495315_sb.jpg",
       "name": "Gustavus De Atta",
       "producer": "De Atta",
       "type":"Audio",
@@ -146,7 +146,7 @@
       "star": 3
     }, {
       "id": 19,
-      "image": "http://dummyimage.com/231x165.png/cc0000/ffffff",
+      "image": "https://cdn-demo.algolia.com/bestbuy-0118/5496202_sb.jpg",
       "name": "Locke Timagegewell",
       "producer": "Timagegewell",
       "type":"Computer",
@@ -154,7 +154,7 @@
       "star": 2
     }, {
       "id": 20,
-      "image": "http://dummyimage.com/231x165.png/cc0000/ffffff",
+      "image": "https://cdn-demo.algolia.com/bestbuy-0118/5495319_sb.jpg",
       "name": "Friederike Tickel",
       "producer": "Tickel",
       "type":"Computer",
