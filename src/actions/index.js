@@ -2,6 +2,7 @@ import * as types from "../constants";
 
 export const fetchListTaskRequest = () => {
   return (dispatch) => {
+    let now = Date.now();
     let xhr = new XMLHttpRequest();
     xhr.open("GET", "http://localhost:3000/products");
     // request state change event
@@ -10,7 +11,8 @@ export const fetchListTaskRequest = () => {
       if (xhr.readyState !== 4) return;
       if (xhr.status === 200) {
         // request successful - show response
-        return dispatch(fetchListTask(JSON.parse(xhr.responseText)));
+        now = Date.now() - now;
+        return dispatch(fetchListTask(JSON.parse(xhr.responseText), now));
       } else {
         // request error
         console.log("HTTP error", xhr.status, xhr.statusText);
@@ -21,11 +23,12 @@ export const fetchListTaskRequest = () => {
   };
 };
 
-export const fetchListTask = (data = []) => {
+export const fetchListTask = (data = [], now) => {
   return {
     type: types.FETCH_TASK,
     payload: {
       data,
+      now,
     },
   };
 };

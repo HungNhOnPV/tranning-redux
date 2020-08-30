@@ -8,13 +8,14 @@ let initialState = {
   text: "",
   type: "",
   star: 0,
+  now: 0,
 };
 
 let myReducers = (state = initialState, action) => {
   switch (action.type) {
     case types.FETCH_TASK: {
-      const { data } = action.payload;
-      return { ...state, listProducts: data };
+      const { data, now } = action.payload;
+      return { ...state, listProducts: data, now: now };
     }
     case types.FETCH_TYPE: {
       const { data } = action.payload;

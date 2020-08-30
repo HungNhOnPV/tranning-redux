@@ -31,7 +31,7 @@ const showPaginate = (products, paginate, setPaginate) => {
   for (let i = 1; i <= count; i++) {
     i === paginate
       ? result.push(
-          <a key={i} onClick={() => setPaginate(i)} className='active'>
+          <a key={i} onClick={() => setPaginate(i)} className="active">
             {i}
           </a>
         )
@@ -49,7 +49,8 @@ const Carts = () => {
   const text = useSelector((state) => state.products.text);
   const type = useSelector((state) => state.products.type);
   const star = useSelector((state) => state.products.star);
-  // const carts = useSelector(state => state.products.carts);
+  const now = useSelector((state) => state.products.now);
+  // const carts = useSelector((state) => state.products.carts);
   const [products, setProducts] = useState(listProducts);
   const [paginate, setPaginate] = useState(1);
   const [select, setSelect] = useState("fea");
@@ -101,24 +102,26 @@ const Carts = () => {
   dispatch(typeActions.showProducts(addCarts(products, paginate)));
 
   return (
-    <div className='carts'>
-      <div className='carts__header'>
-        <p className='count__sort'>{products.length} results found in 3ms</p>
-        <div className='sort'>
-          <label htmlFor='sort'>Sort by</label>
+    <div className="carts">
+      <div className="carts__header">
+        <p className="count__sort">
+          {products.length} results found in {Math.floor(now)}ms
+        </p>
+        <div className="sort">
+          <label htmlFor="sort">Sort by</label>
           <select
-            id='sort'
+            id="sort"
             value={select}
             onChange={(e) => setSelect(e.target.value)}
           >
-            <option value='fea'>Featured</option>
-            <option value='asc'>Price asc</option>
-            <option value='desc'>Price desc</option>
+            <option value="fea">Featured</option>
+            <option value="asc">Price asc</option>
+            <option value="desc">Price desc</option>
           </select>
         </div>
       </div>
-      <div className='carts__main'>{showData()}</div>
-      <div className='carts__pagination'>
+      <div className="carts__main">{showData()}</div>
+      <div className="carts__pagination">
         <a
           onClick={
             paginate === 1
