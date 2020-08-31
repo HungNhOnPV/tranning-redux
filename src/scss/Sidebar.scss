@@ -17,6 +17,7 @@
     text-decoration: none;
     span {
       margin-left: 5px;
+      cursor: pointer;
     }
     &:hover {
       transform: none;
@@ -52,10 +53,12 @@
       p {
         @include customFont(14px, "roboto");
         font-weight: bold;
+        margin-top: 10px;
       }
       label {
         display: block;
         margin: 5px 0 5px;
+        cursor: pointer;
       }
       .star {
         margin-top: 10px;

@@ -49,6 +49,7 @@ const Carts = () => {
   const text = useSelector((state) => state.products.text);
   const type = useSelector((state) => state.products.type);
   const star = useSelector((state) => state.products.star);
+  const brand = useSelector((state) => state.products.brand);
   const now = useSelector((state) => state.products.now);
   // const carts = useSelector((state) => state.products.carts);
   const [products, setProducts] = useState(listProducts);
@@ -64,23 +65,53 @@ const Carts = () => {
     } else if (select === "fea") {
       setProducts(listProducts);
     }
-    if (text !== "" || star !== 0 || type !== "") {
+    if (text !== "" || star !== 0 || type !== "" || brand !== "") {
       const result = [...listProducts].filter((product) => {
-        if (type !== "" && star !== 0 && text !== "") {
+        if (type !== "" && star !== 0 && text !== "" && brand !== "") {
+          return (
+            product.brand.toLowerCase().indexOf(brand.toLowerCase()) !== -1 &&
+            product.name.toLowerCase().indexOf(text.toLowerCase()) !== -1 &&
+            product.type.toLowerCase().indexOf(type.toLowerCase()) !== -1 &&
+            product.star === star
+          );
+        } else if (type !== "" && star !== 0 && text !== "") {
           return (
             product.name.toLowerCase().indexOf(text.toLowerCase()) !== -1 &&
             product.type.toLowerCase().indexOf(type.toLowerCase()) !== -1 &&
             product.star === star
           );
-        } else if (type !== "" && star !== 0) {
+        } else if (type !== "" && star !== 0 && brand !== "") {
           return (
+            product.brand.toLowerCase().indexOf(brand.toLowerCase()) !== -1 &&
             product.type.toLowerCase().indexOf(type.toLowerCase()) !== -1 &&
             product.star === star
           );
-        } else if (text !== "" && star !== 0) {
+        } else if (text !== "" && star !== 0 && brand !== "") {
           return (
+            product.brand.toLowerCase().indexOf(brand.toLowerCase()) !== -1 &&
             product.name.toLowerCase().indexOf(text.toLowerCase()) !== -1 &&
             product.star === star
+          );
+        } else if (text !== "" && type !== "" && brand !== "") {
+          return (
+            product.brand.toLowerCase().indexOf(brand.toLowerCase()) !== -1 &&
+            product.name.toLowerCase().indexOf(text.toLowerCase()) !== -1 &&
+            product.type.toLowerCase().indexOf(type.toLowerCase()) !== -1
+          );
+        } else if (brand !== "" && star !== 0) {
+          return (
+            product.brand.toLowerCase().indexOf(brand.toLowerCase()) !== -1 &&
+            product.star === star
+          );
+        } else if (brand !== "" && type !== "") {
+          return (
+            product.brand.toLowerCase().indexOf(brand.toLowerCase()) !== -1 &&
+            product.type.toLowerCase().indexOf(type.toLowerCase()) !== -1
+          );
+        } else if (text !== "" && brand !== "") {
+          return (
+            product.name.toLowerCase().indexOf(text.toLowerCase()) !== -1 &&
+            product.brand.toLowerCase().indexOf(brand.toLowerCase()) !== -1
           );
         } else if (text !== "" && type !== "") {
           return (
@@ -91,13 +122,27 @@ const Carts = () => {
           return product.name.toLowerCase().indexOf(text.toLowerCase()) !== -1;
         } else if (type !== "") {
           return product.type.toLowerCase().indexOf(type.toLowerCase()) !== -1;
+        } else if (type !== "" && star !== 0) {
+          return (
+            product.type.toLowerCase().indexOf(type.toLowerCase()) !== -1 &&
+            product.star === star
+          );
+        } else if (text !== "" && star !== 0) {
+          return (
+            product.name.toLowerCase().indexOf(text.toLowerCase()) !== -1 &&
+            product.star === star
+          );
+        } else if (brand !== "") {
+          return (
+            product.brand.toLowerCase().indexOf(brand.toLowerCase()) !== -1
+          );
         } else if (star !== 0) {
           return product.star === star;
         }
       });
       setProducts(() => [...result]);
     }
-  }, [select, text, type, star, listProducts]);
+  }, [select, text, type, star, brand, listProducts]);
 
   dispatch(typeActions.showProducts(addCarts(products, paginate)));
 

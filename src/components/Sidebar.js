@@ -1,13 +1,15 @@
 import React, { useEffect } from "react";
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from "react-redux";
 import * as typeActions from "../actions";
 import "../scss/Sidebar.scss";
 
 const Sidebar = (props) => {
-  const types = useSelector(state => state.products.types);
-  const type = useSelector(state => state.products.type);
-  const stars = useSelector(state => state.products.stars);
-  const star = useSelector(state => state.products.star);
+  const types = useSelector((state) => state.products.types);
+  const type = useSelector((state) => state.products.type);
+  const stars = useSelector((state) => state.products.stars);
+  const star = useSelector((state) => state.products.star);
+  const brands = useSelector((state) => state.products.brands);
+  const brand = useSelector((state) => state.products.brand);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -16,6 +18,10 @@ const Sidebar = (props) => {
 
   useEffect(() => {
     dispatch(typeActions.fetchListStarRequest());
+  }, [dispatch]);
+
+  useEffect(() => {
+    dispatch(typeActions.fetchListBrandRequest());
   }, [dispatch]);
 
   const showType = (types) => {
@@ -39,7 +45,11 @@ const Sidebar = (props) => {
     let result = [];
     stars.forEach((star, i) => {
       result.push(
-        <div key={i} className="star_rating" onClick={() => dispatch(typeActions.searchStar(star.star))}>
+        <div
+          key={i}
+          className="star_rating"
+          onClick={() => dispatch(typeActions.searchStar(star.star))}
+        >
           {showStar(star.star)}
         </div>
       );
@@ -58,32 +68,50 @@ const Sidebar = (props) => {
     return result;
   };
 
+  const showBrand = (brands, value) => {
+    let result = [];
+    brands.forEach((brand, i) => {
+      result.push(
+        <label key={i} htmlFor={brand.brand}>
+          <input
+            type="radio"
+            id={brand.brand}
+            checked={value === brand.brand ? true : false}
+            name="brand"
+            onClick={() => dispatch(typeActions.searchBrand(brand.brand))}
+          ></input>
+          &nbsp;{brand.brand}
+        </label>
+      );
+    });
+    return result;
+  };
+
   const resetFilter = (value) => {
     dispatch(typeActions.searchType(value[0]));
     dispatch(typeActions.searchStar(value[1]));
+    dispatch(typeActions.searchBrand(value[2]));
   };
 
   return (
     <sidebar className="sidebar">
-      {type === "" && star === 0 ? (
+      {type === "" && star === 0 && brand === "" ? (
         ""
       ) : (
-        <a className="sidebar__clear" onClick={() => resetFilter(["", 0])}>
+        <a className="sidebar__clear" onClick={() => resetFilter(["", 0, ""])}>
           <i className="fa fa-eraser"></i>
           <span>Clear all filters</span>
         </a>
       )}
       <p className="sidebar__title">Show results for</p>
-      <div className="sidebar__category">
-        {showType(types)}
-      </div>
+      <div className="sidebar__category">{showType(types)}</div>
       <p className="sidebar__title">Refine by</p>
       <div className="sidebar__Refine">
         <form>
           <p>Star</p>
-          <div className="star">
-            {showStarRating(stars)}
-          </div>
+          <div className="star">{showStarRating(stars)}</div>
+          <p>Brand</p>
+          <div className="brand">{showBrand(brands, brand)}</div>
         </form>
       </div>
     </sidebar>

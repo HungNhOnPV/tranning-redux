@@ -7,7 +7,8 @@
       "producer": "Heilds",
       "type": "Audio",
       "price": 584,
-      "star": 4
+      "star": 4,
+      "brand": "Apple"
     }, {
       "id": 2,
       "image": "https://cdn-demo.algolia.com/bestbuy-0118/6386677_sb.jpg",
@@ -15,7 +16,8 @@
       "producer": "Riby",
       "type": "Camera",
       "price": 877,
-      "star": 4
+      "star": 4,
+      "brand": "Apple"
     }, {
       "id": 3,
       "image": "https://cdn-demo.algolia.com/bestbuy-0118/3828012_sb.jpg",
@@ -23,7 +25,8 @@
       "producer": "Whinney",
       "type": "Computer",
       "price": 193,
-      "star": 2
+      "star": 2,
+      "brand": "Samsung"
     }, {
       "id": 4,
       "image": "https://cdn-demo.algolia.com/bestbuy-0118/4835800_sb.jpg",
@@ -31,7 +34,9 @@
       "producer": "Ardern",
       "type": "TV",
       "price": 236,
-      "star": 2
+      "star": 2,
+      "brand": "Samsung"
+
     }, {
       "id": 5,
       "image": "https://cdn-demo.algolia.com/bestbuy-0118/5768586_sb.jpg",
@@ -39,7 +44,8 @@
       "producer": "Etter",
       "type": "Video Games",
       "price": 321,
-      "star": 5
+      "star": 5,
+      "brand": "Dell"
     }, {
       "id": 6,
       "image": "https://cdn-demo.algolia.com/bestbuy-0118/7775211_sb.jpg",
@@ -47,7 +53,8 @@
       "producer": "Atkin",
       "type": "TV",
       "price": 187,
-      "star": 3
+      "star": 3,
+      "brand": "Dell"
     }, {
       "id": 7,
       "image": "https://cdn-demo.algolia.com/bestbuy-0118/8216064_sb.jpg",
@@ -55,7 +62,8 @@
       "producer": "Winspurr",
       "type": "Video Games",
       "price": 766,
-      "star": 5
+      "star": 5,
+      "brand": "LG"
     }, {
       "id": 8,
       "image": "https://cdn-demo.algolia.com/bestbuy-0118/8390036_sb.jpg",
@@ -63,7 +71,8 @@
       "producer": "Weekley",
       "type": "Audio",
       "price": 560,
-      "star": 4
+      "star": 4,
+      "brand": "LG"
     }, {
       "id": 9,
       "image": "https://cdn-demo.algolia.com/bestbuy-0118/5655982_sb.jpg",
@@ -71,7 +80,8 @@
       "producer": "Kops",
       "type":"Video Games",
       "price": 563,
-      "star": 5
+      "star": 5,
+      "brand":"Dell"
     }, {
       "id": 10,
       "image": "https://cdn-demo.algolia.com/bestbuy-0118/5655977_sb.jpg",
@@ -79,7 +89,8 @@
       "producer": "Thomann",
       "type":"Camera",
       "price": 356,
-      "star": 1
+      "star": 1,
+      "brand":"LG"
     }, {
       "id": 11,
       "image": "https://cdn-demo.algolia.com/bestbuy-0118/1792151_sb.jpg",
@@ -87,7 +98,8 @@
       "producer": "McKeating",
       "type":"TV",
       "price": 766,
-      "star": 2
+      "star": 2,
+      "brand":"Apple"
     }, {
       "id": 12,
       "image": "https://cdn-demo.algolia.com/bestbuy-0118/1308183846_sb.jpg",
@@ -95,7 +107,8 @@
       "producer": "Matchett",
       "type":"Camera",
       "price": 805,
-      "star": 1
+      "star": 1,
+      "brand":"Samsung"
     }, {
       "id": 13,
       "image": "https://cdn-demo.algolia.com/bestbuy-0118/9667333_sb.jpg",
@@ -103,7 +116,8 @@
       "producer": "Dowsey",
       "type":"Video Games",
       "price": 164,
-      "star": 1
+      "star": 1,
+      "brand":"Apple"
     }, {
       "id": 14,
       "image": "https://cdn-demo.algolia.com/bestbuy-0118/3458015_sb.jpg",
@@ -111,7 +125,8 @@
       "producer": "Keats",
       "type":"Camera",
       "price": 638,
-      "star": 2
+      "star": 2,
+      "brand":"LG"
     }, {
       "id": 15,
       "image": "https://cdn-demo.algolia.com/bestbuy-0118/4981000_sb.jpg",
@@ -119,7 +134,8 @@
       "producer": "Caulket",
       "type":"Camera",
       "price": 944,
-      "star": 5
+      "star": 5,
+      "brand":"Dell"
     }, {
       "id": 16,
       "image": "https://cdn-demo.algolia.com/bestbuy-0118/4335802_sb.jpg",
@@ -127,7 +143,8 @@
       "producer": "O'Fearguise",
       "type":"Audio",
       "price": 747,
-      "star": 4
+      "star": 4,
+      "brand":"Samsung"
     }, {
       "id": 17,
       "image": "https://cdn-demo.algolia.com/bestbuy-0118/6848136_sb.jpg",
@@ -135,7 +152,8 @@
       "producer": "MacLese",
       "type":"Video Games",
       "price": 270,
-      "star": 3
+      "star": 3,
+      "brand":"Apple"
     }, {
       "id": 18,
       "image": "https://cdn-demo.algolia.com/bestbuy-0118/5495315_sb.jpg",
@@ -143,7 +161,8 @@
       "producer": "De Atta",
       "type":"Audio",
       "price": 465,
-      "star": 3
+      "star": 3,
+      "brand":"Apple"
     }, {
       "id": 19,
       "image": "https://cdn-demo.algolia.com/bestbuy-0118/5496202_sb.jpg",
@@ -151,7 +170,8 @@
       "producer": "Timagegewell",
       "type":"Computer",
       "price": 93,
-      "star": 2
+      "star": 2,
+      "brand":"LG"
     }, {
       "id": 20,
       "image": "https://cdn-demo.algolia.com/bestbuy-0118/5495319_sb.jpg",
@@ -159,7 +179,8 @@
       "producer": "Tickel",
       "type":"Computer",
       "price": 169,
-      "star": 1
+      "star": 1,
+      "brand":"Dell"
     }
   ],
   "types": [
@@ -205,5 +226,23 @@
       "id": 5,
       "star": 5
     }
-  ]
+  ],
+  "brands": [
+    {
+      "id": 1,
+      "brand":"Apple"
+    },
+    {
+      "id": 2,
+      "brand":"Dell"
+    },
+    {
+      "id": 3,
+      "brand":"LG"
+    },
+    {
+      "id": 4,
+      "brand":"Samsung"
+    }
+]
 }

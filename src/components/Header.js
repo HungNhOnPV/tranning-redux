@@ -1,11 +1,11 @@
 import React from "react";
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from "react-redux";
 import * as typeActions from "../actions";
 import "../scss/Header.scss";
 import logo from "../images/logo-is.png";
 
 const Header = () => {
-  const text = useSelector(state => state.products.text);
+  const text = useSelector((state) => state.products.text);
   const dispatch = useDispatch();
 
   return (

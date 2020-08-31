@@ -84,9 +84,39 @@ export const fetchListStarRequest = () => {
   };
 };
 
+export const fetchListBrandRequest = () => {
+  return (dispatch) => {
+    let xhr = new XMLHttpRequest();
+    xhr.open("GET", "http://localhost:3000/brands");
+    // request state change event
+    xhr.onreadystatechange = function () {
+      // request completed?
+      if (xhr.readyState !== 4) return;
+      if (xhr.status === 200) {
+        // request successful - show response
+        return dispatch(fetchListBrand(JSON.parse(xhr.responseText)));
+      } else {
+        // request error
+        console.log("HTTP error", xhr.status, xhr.statusText);
+      }
+    };
+    // start request
+    xhr.send();
+  };
+};
+
 export const fetchListStar = (data = []) => {
   return {
     type: types.FETCH_STAR,
+    payload: {
+      data,
+    },
+  };
+};
+
+export const fetchListBrand = (data = []) => {
+  return {
+    type: types.FETCH_BRAND,
     payload: {
       data,
     },
@@ -116,6 +146,15 @@ export const searchStar = (star = 0) => {
     type: types.SEARCH_STAR,
     payload: {
       star,
+    },
+  };
+};
+
+export const searchBrand = (brand = "") => {
+  return {
+    type: types.SEARCH_BRAND,
+    payload: {
+      brand,
     },
   };
 };
